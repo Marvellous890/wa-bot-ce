@@ -8,16 +8,16 @@ let handler = async (m, { conn, args, groupMetadata}) => {
    let warn = global.db.data.users[who].warn
    if (warn > 0) {
      global.db.data.users[who].warn = 0
-     m.reply(`✅ *RESET WARNS*\n\n───────────\n@${who.split`@`[0]} warns has been reset to 0`)
+     m.reply(`✅ *PARDONED*\n\n───────────\n@${who.split`@`[0]} warns has been reset to 0`)
      m.reply(`✳️ An admin reset your warnings, now you have *0* 😋`, who)
      } else if (warn == 0) {
         m.reply('✳️ The user has no warning')
     }
 
 }
-handler.help = ['resetwarns @user']
+handler.help = ['pardon @user']
 handler.tags = ['group']
-handler.command = ['resetwarns'] 
+handler.command = ['pardon'] 
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
