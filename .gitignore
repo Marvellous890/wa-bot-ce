@@ -5,3 +5,4 @@ package-lock.json
 guru.data.json
 database.json
 .env
+.idea
