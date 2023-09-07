@@ -17,12 +17,12 @@ let handler = async (m, { conn, text, args, groupMetadata, usedPrefix, command }
 ▢ *User:* @${who.split`@`[0]}
 ▢ *Warns:* ${warn}/${war}
 ▢ *Reason:* ${text}`, null, { mentions: [who] }) 
-            m.reply(`
+            /*m.reply(`
 ⚠️ *caution* ⚠️
 You received a warning from an admin
 
 ▢ *Warns:* ${warn}/${war} 
-if you receive *${war}* warnings you will be automatically removed from the group`, who)
+if you receive *${war}* warnings you will be automatically removed from the group`, who)*/
         } else if (warn == war) {
             global.db.data.users[who].warn = 0
             m.reply(`⛔ The user reached the warning limit of *${war}* and will therefore be removed`)
